@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosso Amor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="bgMusic" src="audio/musica.mp3" loop></audio>
+
+    <div id="inicio" class="tela-inicial">
+      <button id="startBtn">Começar nossa história</button>
+    </div>
+
+    <div id="mensagem" class="escondido">
+      <div class="mensagem-container">
+        <p>
+          Há exatamente um ano, te vi pela primeira vez, como um sol nascente que ilumina uma terra sem luz,
+          você é meu tudo, minha morceguinha, meu amor, que dá sentido à minha vida. Esse é meu presente para celebrar nosso primeiro ano junto. Para relembrar nossos momentos especiais.
+        </p>
+        <button id="avancarBtn">Ver nossa história</button>
+      </div>
+    </div>
+
+    <div id="galeria" class="escondido">
+      <div class="carrossel-container">
+        <button id="voltar" class="navegar">⟵</button>
+        <div class="carrossel" id="carrossel">
+          <div class="slide">
+            <img src="img/agosto.jpg" alt="Agosto" />
+            <h3>Agosto</h3>
+          </div>
+          <div class="slide">
+            <img src="img/setembro.jpg" alt="Setembro" />
+            <h3>Setembro</h3>
+          </div>
+          <div class="slide">
+            <img src="img/outubro.jpg" alt="Outubro" />
+            <h3>Outubro</h3>
+          </div>
+          <div class="slide">
+            <img src="img/novembro.jpg" alt="Novembro" />
+            <h3>Novembro</h3>
+          </div>
+          <div class="slide">
+            <img src="img/dezembro.jpg" alt="Dezembro" />
+            <h3>Dezembro</h3>
+          </div>
+          <div class="slide">
+            <img src="img/janeiro.jpg" alt="Janeiro" />
+            <h3>Janeiro</h3>
+          </div>
+          <div class="slide">
+            <img src="img/fevereiro.jpg" alt="Fevereiro" />
+            <h3>Fevereiro</h3>
+          </div>
+          <div class="slide">
+            <img src="img/marco.jpg" alt="Março" />
+            <h3>Março</h3>
+          </div>
+          <div class="slide">
+            <img src="img/abril.jpg" alt="Abril" />
+            <h3>Abril</h3>
+          </div>
+          <div class="slide">
+            <img src="img/maio.jpg" alt="Maio" />
+            <h3>Maio</h3>
+          </div>
+          <div class="slide">
+            <img src="img/junho.jpg" alt="Junho" />
+            <h3>Junho</h3>
+          </div>
+          <div class="slide">
+            <img src="img/julho.jpg" alt="Julho" />
+            <h3>Julho</h3>
+          </div>
+          <div class="slide video-slide">
+            <div class="video-container">
+              <iframe
+                src="https://player.vimeo.com/video/2893193?autoplay=0"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3>Nosso vídeo especial</h3>
+          </div>
+        </div>
+        <button id="avancar" class="navegar">⟶</button>
+      </div>
+      <div class="pedido-final">
+        <button id="pedidoBtn">FINAL</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
