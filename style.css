@@ -145,3 +145,48 @@ body {
 #pedidoBtn:hover {
   background-color: #388e3c;
 }
+.botao-pedido button {
+  padding: 20px 40px;
+  font-size: 1.3em;
+  background: linear-gradient(to right, #ff0033, #cc0022);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 51, 0.6);
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+.botao-pedido button:hover {
+  background: linear-gradient(to right, #cc0022, #99001a);
+  transform: scale(1.05);
+}
+
+.modal-conteudo button {
+  padding: 15px 30px;
+  font-size: 1.1em;
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-conteudo button:hover {
+  background-color: #cc0033;
+  transform: scale(1.03);
+}
+
+/* Animação de pulso */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 51, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.5);
+  }
+}
