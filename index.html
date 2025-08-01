@@ -1,99 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nosso Amor</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <audio id="bgMusic" src="audio/musica.mp3" loop></audio>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nosso Amor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="bgMusic" src="audio/musica.mp3" loop></audio>
 
-    <div id="inicio" class="tela-inicial">
-      <button id="startBtn">Começar nossa história</button>
+  <!-- Tela Inicial -->
+  <div id="inicio" class="tela-inicial">
+    <button id="startBtn">Começar nossa história</button>
+  </div>
+
+  <!-- Mensagem Romântica -->
+  <div id="mensagem" class="escondido">
+    <div class="mensagem-container">
+      <p>Há exatamente um ano, te vi pela primeira vez, como um sol nascente que ilumina uma terra sem luz,
+          você é meu tudo, minha morceguinha, meu amor, que dá sentido à minha vida. Esse é meu presente para celebrar nosso primeiro ano junto. Para relembrar nossos momentos especiais.❤️</p>
+      <button id="verVideoBtn">Uma de várias músicas que tornaram nossos momentos juntos especiais.</button>
+    </div>
+  </div>
+
+  <!-- Tela do Vídeo -->
+  <div id="videoSection" class="escondido">
+  <div class="mensagem-container">
+    <div style="padding:75% 0 0 0;position:relative;width:100%;max-width:800px;margin:auto;">
+      <iframe src="https://player.vimeo.com/video/88306591?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        title="Pearl Jam - Black (MTV Unplugged Legendado)">
+      </iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <button id="verGaleriaBtn">Ver nossa jornada</button>
+  </div>
+</div>
+
+
+  <!-- Galeria -->
+  <div id="galeria" class="escondido">
+    <div class="carrossel-container">
+      <button id="voltar" class="navegar">⟵</button>
+      <div class="carrossel" id="carrossel">
+        <div class="slide"><img src="img/agosto.jpg" alt="Agosto" /><h3>Agosto</h3></div>
+        <div class="slide"><img src="img/setembro.jpg" alt="Setembro" /><h3>Setembro</h3></div>
+        <div class="slide"><img src="img/outubro.jpg" alt="Outubro" /><h3>Outubro</h3></div>
+        <div class="slide"><img src="img/novembro.jpg" alt="Novembro" /><h3>Novembro</h3></div>
+        <div class="slide"><img src="img/dezembro.jpg" alt="Dezembro" /><h3>Dezembro</h3></div>
+        <div class="slide"><img src="img/janeiro.jpg" alt="Janeiro" /><h3>Janeiro</h3></div>
+        <div class="slide"><img src="img/fevereiro.jpg" alt="Fevereiro" /><h3>Fevereiro</h3></div>
+        <div class="slide"><img src="img/marco.jpg" alt="Março" /><h3>Março</h3></div>
+        <div class="slide"><img src="img/abril.jpg" alt="Abril" /><h3>Abril</h3></div>
+        <div class="slide"><img src="img/maio.jpg" alt="Maio" /><h3>Maio</h3></div>
+        <div class="slide"><img src="img/junho.jpg" alt="Junho" /><h3>Junho</h3></div>
+        <div class="slide"><img src="img/julho.jpg" alt="Julho" /><h3>Julho</h3></div>
+      </div>
+      <button id="avancar" class="navegar">⟶</button>
     </div>
 
-    <div id="mensagem" class="escondido">
-      <div class="mensagem-container">
-        <p>
-          Há exatamente um ano, te vi pela primeira vez, como um sol nascente que ilumina uma terra sem luz,
-          você é meu tudo, minha morceguinha, meu amor, que dá sentido à minha vida. Esse é meu presente para celebrar nosso primeiro ano junto. Para relembrar nossos momentos especiais.
-        </p>
-        <button id="avancarBtn">Ver nossa história</button>
-      </div>
+    <!-- Botão do pedido -->
+    <div class="botao-pedido escondido" id="pedidoBtnWrapper">
+      <button id="abrirPopupBtn">Tenho algo a te dizer...</button>
     </div>
+  </div>
 
-    <div id="galeria" class="escondido">
-      <div class="carrossel-container">
-        <button id="voltar" class="navegar">⟵</button>
-        <div class="carrossel" id="carrossel">
-          <div class="slide">
-            <img src="img/agosto.jpg" alt="Agosto" />
-            <h3>Agosto</h3>
-          </div>
-          <div class="slide">
-            <img src="img/setembro.jpg" alt="Setembro" />
-            <h3>Setembro</h3>
-          </div>
-          <div class="slide">
-            <img src="img/outubro.jpg" alt="Outubro" />
-            <h3>Outubro</h3>
-          </div>
-          <div class="slide">
-            <img src="img/novembro.jpg" alt="Novembro" />
-            <h3>Novembro</h3>
-          </div>
-          <div class="slide">
-            <img src="img/dezembro.jpg" alt="Dezembro" />
-            <h3>Dezembro</h3>
-          </div>
-          <div class="slide">
-            <img src="img/janeiro.jpg" alt="Janeiro" />
-            <h3>Janeiro</h3>
-          </div>
-          <div class="slide">
-            <img src="img/fevereiro.jpg" alt="Fevereiro" />
-            <h3>Fevereiro</h3>
-          </div>
-          <div class="slide">
-            <img src="img/marco.jpg" alt="Março" />
-            <h3>Março</h3>
-          </div>
-          <div class="slide">
-            <img src="img/abril.jpg" alt="Abril" />
-            <h3>Abril</h3>
-          </div>
-          <div class="slide">
-            <img src="img/maio.jpg" alt="Maio" />
-            <h3>Maio</h3>
-          </div>
-          <div class="slide">
-            <img src="img/junho.jpg" alt="Junho" />
-            <h3>Junho</h3>
-          </div>
-          <div class="slide">
-            <img src="img/julho.jpg" alt="Julho" />
-            <h3>Julho</h3>
-          </div>
-          <div class="slide video-slide">
-            <div class="video-container">
-              <iframe
-                src="https://player.vimeo.com/video/2893193?autoplay=0"
-                frameborder="0"
-                allow="autoplay; fullscreen"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <h3>Nosso vídeo especial</h3>
-          </div>
-        </div>
-        <button id="avancar" class="navegar">⟶</button>
-      </div>
-      <div class="pedido-final">
-        <button id="pedidoBtn">FINAL</button>
-      </div>
+  <!-- Pop-up final -->
+  <div id="popupFinal" class="modal-pedido escondido">
+    <div class="modal-conteudo">
+      <p>Se eu pudesse descrever quanto sentimentos eu tenho, um livro seria mais viável, 
+        porém fiz esse albúm às pressas, mas com muito carinho.
+        Mikely, você é para mim, a maior realização, meu presente divino. Meu amor.</p>
+      <a href="pedido.html"><button>Ir para o final 💖</button></a>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
