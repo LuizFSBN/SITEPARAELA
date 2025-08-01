@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('img/fundo-pedido.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container-pedido {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(255, 0, 51, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.texto-pedido {
+  font-size: 1.8em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px black;
+}
+
+#revelar-pedido-btn {
+  padding: 20px 50px;
+  font-size: 1.5em;
+  background-color: #ff0033;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#revelar-pedido-btn:hover {
+  background-color: #990026;
+}

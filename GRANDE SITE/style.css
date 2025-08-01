@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  text-align: center;
+}
+
+.tela-inicial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #1a000e, #330015);
+}
+
+.tela-inicial button {
+  padding: 20px 40px;
+  font-size: 1.4em;
+  background-color: #cc0033;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tela-inicial button:hover {
+  background-color: #990026;
+}
+
+.escondido {
+  display: none;
+}
+
+.mensagem-container {
+  padding: 60px 20px;
+  background-image: url('img/fundo-romantico.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(0.5);
+  color: white;
+  text-shadow: 2px 2px 6px black;
+}
+
+.mensagem-container p {
+  font-size: 1.6em;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.mensagem-container button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #cc0033;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.mensagem-container button:hover {
+  background-color: #990026;
+}
+
+.carrossel-container {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(255, 0, 51, 0.4);
+}
+
+.slide h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #ff0033;
+}
+
+.video-slide iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.navegar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(204, 0, 51, 0.8);
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+#voltar {
+  left: 0;
+}
+
+#avancar {
+  right: 0;
+}
+
+.pedido-final {
+  margin: 40px 0;
+}
+
+#pedidoBtn {
+  display: none; /* Regra para esconder o botão inicialmente */
+  padding: 20px 50px;
+  font-size: 1.4em;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#pedidoBtn:hover {
+  background-color: #388e3c;
+}
