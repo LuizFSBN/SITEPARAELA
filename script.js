@@ -1,57 +1,75 @@
-const startBtn = document.getElementById('startBtn');
 const inicio = document.getElementById('inicio');
 const mensagem = document.getElementById('mensagem');
-const avancarBtn = document.getElementById('avancarBtn');
+const videoSection = document.getElementById('videoSection');
 const galeria = document.getElementById('galeria');
 const carrossel = document.getElementById('carrossel');
+const pedidoBtnWrapper = document.getElementById('pedidoBtnWrapper');
+const popupFinal = document.getElementById('popupFinal');
+
+const startBtn = document.getElementById('startBtn');
+const verVideoBtn = document.getElementById('verVideoBtn');
+const verGaleriaBtn = document.getElementById('verGaleriaBtn');
+const abrirPopupBtn = document.getElementById('abrirPopupBtn');
+
 const voltarBtn = document.getElementById('voltar');
-const avancarSetaBtn = document.getElementById('avancar');
-const pedidoBtn = document.getElementById('pedidoBtn');
+const avancarBtn = document.getElementById('avancar');
+
 const bgMusic = document.getElementById('bgMusic');
 
 let slideIndex = 0;
-const totalSlides = document.querySelectorAll('.slide').length;
 
-startBtn.addEventListener('click', () => {
+function esconderTudo() {
   inicio.classList.add('escondido');
+  mensagem.classList.add('escondido');
+  videoSection.classList.add('escondido');
+  galeria.classList.add('escondido');
+  popupFinal.classList.add('escondido');
+  pedidoBtnWrapper.classList.add('escondido');
+}
+
+startBtn.onclick = () => {
+  esconderTudo();
   mensagem.classList.remove('escondido');
   bgMusic.play().catch(() => {});
-});
+};
 
-avancarBtn.addEventListener('click', () => {
-  mensagem.classList.add('escondido');
+verVideoBtn.onclick = () => {
+  esconderTudo();
+  videoSection.classList.remove('escondido');
+};
+
+verGaleriaBtn.onclick = () => {
+  esconderTudo();
   galeria.classList.remove('escondido');
   updateCarousel();
-});
+};
 
-avancarSetaBtn.addEventListener('click', () => {
-  if (slideIndex < totalSlides - 1) {
-    slideIndex++;
-    updateCarousel();
-  }
-});
-
-voltarBtn.addEventListener('click', () => {
+voltarBtn.onclick = () => {
   if (slideIndex > 0) {
     slideIndex--;
     updateCarousel();
   }
-});
+};
+
+avancarBtn.onclick = () => {
+  const totalSlides = document.querySelectorAll('.slide').length;
+  if (slideIndex < totalSlides - 1) {
+    slideIndex++;
+    updateCarousel();
+  }
+};
 
 function updateCarousel() {
   carrossel.style.transform = `translateX(-${slideIndex * 100}%)`;
 
-  // Lógica para mostrar/esconder o botão do pedido final
+  const totalSlides = document.querySelectorAll('.slide').length;
   if (slideIndex === totalSlides - 1) {
-    pedidoBtn.style.display = 'block';
+    pedidoBtnWrapper.classList.remove('escondido');
   } else {
-    pedidoBtn.style.display = 'none';
+    pedidoBtnWrapper.classList.add('escondido');
   }
 }
 
-pedidoBtn.addEventListener('click', () => {
-  window.location.href = 'pedido.html';
-});
-
-// Inicializa a galeria com o botão do pedido escondido
-updateCarousel();
+abrirPopupBtn.onclick = () => {
+  popupFinal.classList.remove('escondido');
+};
